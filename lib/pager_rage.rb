@@ -1,3 +1,4 @@
+require 'json'
 require 'sequel'
 
 DB = Sequel.connect ENV['DATABASE_URL'] || 'postgres://localhost/pager_rage'

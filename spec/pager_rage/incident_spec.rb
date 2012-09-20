@@ -40,7 +40,9 @@ describe PagerRage::Incident do
       incident.pagerduty_created_on.should eq DateTime.parse(incident_data['created_on'])
     end
  
-    it 'should set subject'
+    it 'should set subject' do
+      incident.subject.should eq(incident_data['trigger_summary_data']['subject'])
+    end
     it 'should set service_name'
   end
 end

@@ -14,5 +14,9 @@ describe PagerRage::Incident do
       PagerRage::Incident.create(:data => {})
       PagerRage::Incident.count.should eq(1)
     end
+
+    it 'should require data' do
+      lambda { PagerRage::Incident.create }.should raise_error(Sequel::ValidationFailed)
+    end
   end
 end

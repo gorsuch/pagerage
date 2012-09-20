@@ -5,7 +5,11 @@ DB = Sequel.connect ENV['DATABASE_URL'] || 'postgres://localhost/pager_rage'
 
 DB.create_table :incidents do
   primary_key :id
-  Text :data
+  Integer     :incident_number
+  DateTime    :pagerduty_created_on
+  String      :service_name
+  String      :subject
+  Text        :data
 end unless DB.table_exists?(:incidents)
 
 module PagerRage

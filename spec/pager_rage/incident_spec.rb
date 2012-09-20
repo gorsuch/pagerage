@@ -28,5 +28,10 @@ describe PagerRage::Incident do
     it 'should be okay after parsing the sample' do
       incident.should be_kind_of(PagerRage::Incident)
     end
+
+    it 'should set incident_number'
+    it 'should set pagerduty_created_on'
+    it 'should set subject'
+    it 'should set service_name'
   end
 end

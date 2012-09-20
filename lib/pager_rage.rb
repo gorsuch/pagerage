@@ -1,6 +1,8 @@
 require 'json'
 require 'sequel'
 
+Sequel.datetime_class = DateTime
+
 DB = Sequel.connect ENV['DATABASE_URL'] || 'postgres://localhost/pager_rage'
 
 DB.create_table :incidents do

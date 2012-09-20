@@ -5,6 +5,7 @@ module PagerRage
 
     def before_save
       self.incident_number = self.data['incident_number']
+      self.pagerduty_created_on = self.data['created_on']
       super
     end
 

@@ -1,17 +1,20 @@
 require 'spec_helper'
 
 describe PagerRage::Incident do
+  let(:incident_json) { File.read(File.dirname(__FILE__) + '/incident_sample.json') }                                                
+  let(:incident_data) { JSON.parse(incident_json) }                                   
+
   before(:each) do 
     PagerRage::Incident.destroy
   end
 
   describe 'creation' do
     it 'should return an Incident' do
-      PagerRage::Incident.create(:data => {}).should be_kind_of(PagerRage::Incident)
+      PagerRage::Incident.create(:data => incident_data).should be_kind_of(PagerRage::Incident)
     end
 
     it 'should increase the count' do
-      PagerRage::Incident.create(:data => {})
+      PagerRage::Incident.create(:data => incident_data)
       PagerRage::Incident.count.should eq(1)
     end
 
@@ -29,7 +32,9 @@ describe PagerRage::Incident do
       incident.should be_kind_of(PagerRage::Incident)
     end
 
-    it 'should set incident_number'
+    it 'should set incident_number' do
+      incident.incident_number.should eq(1)
+    end
     it 'should set pagerduty_created_on'
     it 'should set subject'
     it 'should set service_name'

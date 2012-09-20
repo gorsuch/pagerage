@@ -1,4 +1,4 @@
-![Pager Rage](https://raw.github.com/gorsuch/pager_rage/master/meme.jpg)
+![Pager Rage](https://raw.github.com/gorsuch/pager_rage/master/pager_rage.jpg)
 
 # PagerRage
 

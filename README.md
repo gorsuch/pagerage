@@ -2,6 +2,8 @@
 
 # PagerRage
 
+[![Build Status](https://secure.travis-ci.org/gorsuch/pager_rage.png)](http://travis-ci.org/gorsuch/pager_rage)
+
 Coming soon.
 
 ## Installation

@@ -1,6 +1,6 @@
 require 'sequel'
 
-DB = Sequel.connect ENV['DATABASE_URL']
+DB = Sequel.connect ENV['DATABASE_URL'] || 'postgres://localhost/pager_rage'
 
 DB.create_table :incidents do
   primary_key :id

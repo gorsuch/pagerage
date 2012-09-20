@@ -43,6 +43,9 @@ describe PagerRage::Incident do
     it 'should set subject' do
       incident.subject.should eq(incident_data['trigger_summary_data']['subject'])
     end
-    it 'should set service_name'
+
+    it 'should set service_name' do
+      incident.service_name.should eq(incident_data['service']['name'])
+    end
   end
 end

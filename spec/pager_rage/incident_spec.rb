@@ -5,7 +5,7 @@ describe PagerRage::Incident do
     PagerRage::Incident.destroy
   end
 
-  describe "creation" do
+  describe 'creation' do
     it 'should return an Incident' do
       PagerRage::Incident.create(:data => {}).should be_kind_of(PagerRage::Incident)
     end

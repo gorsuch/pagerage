@@ -11,5 +11,6 @@ end unless DB.table_exists?(:incidents)
 module PagerRage
 end
 
-require 'pager_rage/version'
 require 'pager_rage/incident'
+require 'pager_rage/incidents_parser'
+require 'pager_rage/version'

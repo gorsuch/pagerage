@@ -1,5 +1,4 @@
-require "pager_rage/version"
+require 'pager_rage/version'
 
 module PagerRage
-  # Your code goes here...
 end

@@ -1,2 +1,2 @@
 before_script:
-  - psql -c 'create database pager_rage;' -U postgres
+  - psql -c 'create database pagerage;' -U postgres

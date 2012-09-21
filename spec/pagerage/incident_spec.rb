@@ -1,35 +1,35 @@
 require 'spec_helper'
 
-describe PagerRage::Incident do
+describe Pagerage::Incident do
   let(:incident_json) { File.read(File.dirname(__FILE__) + '/incident_sample.json') }                                                
   let(:incident_data) { JSON.parse(incident_json) }                                   
 
   before(:each) do 
-    PagerRage::Incident.destroy
+    Pagerage::Incident.destroy
   end
 
   describe 'creation' do
     it 'should return an Incident' do
-      PagerRage::Incident.create(:data => incident_data).should be_kind_of(PagerRage::Incident)
+      Pagerage::Incident.create(:data => incident_data).should be_kind_of(Pagerage::Incident)
     end
 
     it 'should increase the count' do
-      PagerRage::Incident.create(:data => incident_data)
-      PagerRage::Incident.count.should eq(1)
+      Pagerage::Incident.create(:data => incident_data)
+      Pagerage::Incident.count.should eq(1)
     end
 
     it 'should require data' do
-      lambda { PagerRage::Incident.create }.should raise_error(Sequel::ValidationFailed)
+      lambda { Pagerage::Incident.create }.should raise_error(Sequel::ValidationFailed)
     end
   end
 
   describe 'parsing data' do
     let(:incident_json) { File.read(File.dirname(__FILE__) + '/incident_sample.json') }
     let(:incident_data) { JSON.parse(incident_json) }
-    let(:incident) { PagerRage::Incident.create(:data => incident_data) }
+    let(:incident) { Pagerage::Incident.create(:data => incident_data) }
 
     it 'should be okay after parsing the sample' do
-      incident.should be_kind_of(PagerRage::Incident)
+      incident.should be_kind_of(Pagerage::Incident)
     end
 
     it 'should set incident_number' do

@@ -3,7 +3,7 @@ require 'sequel'
 
 Sequel.datetime_class = DateTime
 
-DB = Sequel.connect ENV['DATABASE_URL'] || 'postgres://localhost/pager_rage'
+DB = Sequel.connect ENV['DATABASE_URL'] || 'postgres://localhost/pagerage'
 
 DB.create_table :incidents do
   primary_key :id
@@ -14,9 +14,9 @@ DB.create_table :incidents do
   Text        :data
 end unless DB.table_exists?(:incidents)
 
-module PagerRage
+module Pagerage
 end
 
-require 'pager_rage/incident'
-require 'pager_rage/incidents_parser'
-require 'pager_rage/version'
+require 'pagerage/incident'
+require 'pagerage/incidents_parser'
+require 'pagerage/version'

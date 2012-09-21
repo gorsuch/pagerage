@@ -1,4 +1,4 @@
-module PagerRage
+module Pagerage
   class IncidentsParser
     attr_reader :data
 

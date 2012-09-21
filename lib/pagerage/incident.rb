@@ -1,4 +1,4 @@
-module PagerRage
+module Pagerage
   class Incident < Sequel::Model
     plugin :serialization, :json, :data
     plugin :validation_helpers

@@ -1,8 +1,8 @@
-![Pager Rage](https://raw.github.com/gorsuch/pager_rage/master/pager_rage.jpg)
+![Pagerage](https://raw.github.com/gorsuch/pager_rage/master/pagerage.jpg)
 
-# PagerRage
+# Pagerage
 
-[![Build Status](https://secure.travis-ci.org/gorsuch/pager_rage.png)](http://travis-ci.org/gorsuch/pager_rage)
+[![Build Status](https://secure.travis-ci.org/gorsuch/pagerage.png)](http://travis-ci.org/gorsuch/pagerage)
 
 Coming soon.
 
@@ -10,7 +10,7 @@ Coming soon.
 
 Add this line to your application's Gemfile:
 
-    gem 'pager_rage'
+    gem 'pagerage'
 
 And then execute:
 
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install pager_rage
+    $ gem install pagerage
 
 ## Usage
 

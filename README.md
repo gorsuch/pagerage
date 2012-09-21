@@ -4,25 +4,7 @@
 
 [![Build Status](https://secure.travis-ci.org/gorsuch/pagerage.png)](http://travis-ci.org/gorsuch/pagerage)
 
-Coming soon.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'pagerage'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install pagerage
-
-## Usage
-
-TODO: Write usage instructions here
+Coming soon.  It's going to blow your mother fucking mind.
 
 ## Contributing
 

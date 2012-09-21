@@ -1,4 +1,4 @@
-![Pagerage](https://raw.github.com/gorsuch/pager_rage/master/pagerage.jpg)
+![Pagerage](https://raw.github.com/gorsuch/pagerage/master/pagerage.jpg)
 
 # Pagerage
 

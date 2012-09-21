@@ -4,7 +4,7 @@
 
 [![Build Status](https://secure.travis-ci.org/gorsuch/pagerage.png)](http://travis-ci.org/gorsuch/pagerage)
 
-Coming soon.  It's going to blow your mother fucking mind.
+Coming soon!
 
 ## Contributing
 

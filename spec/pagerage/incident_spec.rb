@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Pagerage::Incident do
   let(:incident_json) { File.read(File.dirname(__FILE__) + '/incident_sample.json') }                                                
   let(:incident_data) { JSON.parse(incident_json) }                                   
+  let(:incident) { Pagerage::Incident.create(:data => incident_data) }
 
   before(:each) do 
     Pagerage::Incident.destroy
@@ -24,10 +25,6 @@ describe Pagerage::Incident do
   end
 
   describe 'parsing data' do
-    let(:incident_json) { File.read(File.dirname(__FILE__) + '/incident_sample.json') }
-    let(:incident_data) { JSON.parse(incident_json) }
-    let(:incident) { Pagerage::Incident.create(:data => incident_data) }
-
     it 'should be okay after parsing the sample' do
       incident.should be_kind_of(Pagerage::Incident)
     end
@@ -47,5 +44,10 @@ describe Pagerage::Incident do
     it 'should set service_name' do
       incident.service_name.should eq(incident_data['service']['name'])
     end
+  end
+
+  it 'should responsd to latest' do
+    incident
+    Pagerage::Incident.latest.should eq(incident)
   end
 end

@@ -3,6 +3,10 @@ module Pagerage
     plugin :serialization, :json, :data
     plugin :validation_helpers
 
+    def self.latest
+      order(:pagerduty_created_on).last
+    end
+
     def before_save
       self.incident_number = self.data['incident_number']
       self.pagerduty_created_on = self.data['created_on']

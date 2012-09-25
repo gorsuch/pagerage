@@ -14,9 +14,6 @@ DB.create_table :incidents do
   Text        :data
 end unless DB.table_exists?(:incidents)
 
-module Pagerage
-end
-
 require 'pagerage/incident'
 require 'pagerage/incidents_parser'
 require 'pagerage/version'

@@ -4,6 +4,17 @@
 
 Coming soon!
 
+## Local Development
+
+* assumes you have a local, empty postgres db named 'pagerage'
+* assumes you have a pagerduty login and password
+
+```bash
+$ export PAGERDUTY_BASE_URL=https://user%40domain.com:password@domain.pagerduty.com/api/v1
+$ bundle exec shotgun
+$ open http://localhost:9393
+```
+
 ## Heroku Setup
 
 ```bash

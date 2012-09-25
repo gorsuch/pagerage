@@ -11,5 +11,5 @@ begin
     spec.ruby_opts = '-I .'
   end
   task :default => :spec
-rescue
+rescue LoadError
 end

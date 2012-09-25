@@ -12,6 +12,7 @@ describe Pagerage::IncidentsFetcher do
     end
 
     it 'should explode upon not getting a url' do
+      ENV.stub(:[]).with('PAGERDUTY_BASE_URL') { nil }
       lambda { Pagerage::IncidentsFetcher.new({}) }.should raise_error
     end
   end

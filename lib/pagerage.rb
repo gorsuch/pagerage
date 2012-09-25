@@ -21,4 +21,5 @@ end unless DB.table_exists?(:incidents)
 require 'pagerage/incident'
 require 'pagerage/incidents_fetcher'
 require 'pagerage/incidents_parser'
+require 'pagerage/incidentinator'
 require 'pagerage/version'

@@ -11,6 +11,6 @@ describe Pagerage::IncidentsParser do
 
   it 'should generate two incidents from the sample data' do
     2.times { Pagerage::Incident.should_receive(:create) }
-    parser.generate_incidents!
+    parser.run!
   end
 end

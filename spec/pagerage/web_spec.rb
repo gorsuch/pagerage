@@ -10,6 +10,13 @@ describe Pagerage::Web do
     Pagerage::Web
   end
 
+  describe 'GET /' do
+    it 'should respond with a 200' do
+      get '/'
+      last_response.should be_ok
+    end
+  end
+
   describe 'GET /health' do
     it 'should respond with a 200' do
       get '/health'

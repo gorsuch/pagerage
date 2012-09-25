@@ -1,5 +1,7 @@
 require 'json'
+require 'rest_client'
 require 'sequel'
+require 'time'
 
 Sequel.datetime_class = DateTime
 

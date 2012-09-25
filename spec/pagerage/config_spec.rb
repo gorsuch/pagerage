@@ -11,4 +11,13 @@ describe Pagerage::Config do
       lambda { Pagerage::Config.env!('foo') }.should raise_error
     end
   end
+
+  describe 'pagerduty_base_url' do
+    it 'should return it if it is set' do
+      var = 'PAGERDUTY_BASE_URL'
+      url = 'https://foo.pagerduty.com/api/v1'
+      ENV.stub(:[]).with(var) { url }
+      Pagerage::Config.env!(var).should eq(url)
+    end
+  end
 end

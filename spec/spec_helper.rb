@@ -1,3 +1,6 @@
+require 'timecop'
+require 'webmock/rspec'
+
 require 'pagerage'
 
 RSpec.configure do |config|

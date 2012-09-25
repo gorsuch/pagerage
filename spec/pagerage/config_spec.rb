@@ -12,12 +12,25 @@ describe Pagerage::Config do
     end
   end
 
+  describe 'database_url' do
+    it 'should return a value if DATABASE_URL is set' do
+      var = 'DATABASE_URL'
+      url = 'postgres://'
+      ENV.stub(:[]).with(var) { url }
+      Pagerage::Config.database_url.should eq(url)
+    end
+
+    it 'should return a sane value if DATABASE_URL is not set' do
+      Pagerage::Config.database_url.should eq('postgres://localhost/pagerage')
+    end
+  end
+
   describe 'pagerduty_base_url' do
     it 'should return it if it is set' do
       var = 'PAGERDUTY_BASE_URL'
       url = 'https://foo.pagerduty.com/api/v1'
       ENV.stub(:[]).with(var) { url }
-      Pagerage::Config.env!(var).should eq(url)
+      Pagerage::Config.pagerduty_base_url.should eq(url)
     end
   end
 end

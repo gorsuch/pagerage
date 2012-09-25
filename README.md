@@ -6,6 +6,22 @@
 
 Coming soon!
 
+## Configuration
+
+```bash
+export PAGERDUTY_BASE_URL=https://user%40domain.com:password@domain.pagerduty.com/api/v1
+```
+
+## Fetching Incidents
+
+We currently only fetch the most recent incidents over the past 24 hours.  Clearly this needs to be optimized, but it is good enough to move forward with.
+
+```bash
+$ bundle exec rake fetch
+```
+
+The above command will return an integer representing the amount of new incidents.
+
 ## Running Tests
 
 Tests are mostly standard RSpec. Run them:

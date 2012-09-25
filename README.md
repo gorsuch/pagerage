@@ -6,6 +6,14 @@
 
 Coming soon!
 
+## Running Tests
+
+Tests are mostly standard RSpec. Run them:
+
+```bash
+$ bundle exec rake
+```
+
 ## Contributing
 
 1. Fork it

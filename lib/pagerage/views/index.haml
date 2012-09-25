@@ -1,11 +1,6 @@
-%h1 Welcome to Pagerage
-%h2
-  %span Incident Count:
-  %span= incidents.count
-
 %table
   %tbody
   - incidents.each do |i|
     %tr
-      %td= i.subject
       %td= i.service_name
+      %td= i.subject

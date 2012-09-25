@@ -3,8 +3,7 @@ require 'sinatra/base'
 module Pagerage
   class Web < Sinatra::Base
     get '/' do
-      Incident.all
-      haml :index
+      haml :index, :locals => { :incidents => Incident.all }
     end
 
     get '/health' do

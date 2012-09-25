@@ -1,0 +1,36 @@
+!!! 5
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    - title = title || "Pagerage"
+    %title= title
+    %meta{ "http-equiv" => "Content-Type", :content => "text/html;charset=utf-8" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/css/bootstrap.min.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/css/style.css" }
+    %script{ :type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" }
+    %script{ :type => "text/javascript", :src => "/js/bootstrap.min.js" }
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{ :href => "/" } Pagerage
+          %ul.nav
+            %li.home.active
+              %a{ :href => "/" } Home
+            %li.graphs
+              %a{ :href => "/graphs" } Graphs
+            %li.dashboards
+              %a{ :href => "/dashboards" } Dashboards
+            %li.metrics
+              %a{ :href => "/metrics" } Metrics
+
+    .container
+      :javascript
+        $(document).ready(function() {
+
+          // Highlight current active tab
+          $('.nav li.active').removeClass('active');
+          var path = location.pathname.split("/")[1] || 'home';
+          $('li.' + path).addClass('active');
+
+        });
+      =yield

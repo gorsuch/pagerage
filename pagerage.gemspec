@@ -20,6 +20,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('rack-test')
   gem.add_development_dependency('rake')
   gem.add_development_dependency('rspec')
+  gem.add_development_dependency('shotgun')
   gem.add_development_dependency('timecop')
   gem.add_development_dependency('webmock')
   gem.add_dependency('haml')

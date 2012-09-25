@@ -15,5 +15,6 @@ DB.create_table :incidents do
 end unless DB.table_exists?(:incidents)
 
 require 'pagerage/incident'
+require 'pagerage/incidents_fetcher'
 require 'pagerage/incidents_parser'
 require 'pagerage/version'

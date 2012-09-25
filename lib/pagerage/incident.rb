@@ -8,12 +8,14 @@ module Pagerage
     end
 
     def before_validation
-      self.incident_number = self.data['incident_number']
-      self.pagerduty_created_on = self.data['created_on']
-      if self.data['trigger_summary_data']
-        self.subject = self.data['trigger_summary_data']['subject']
+      if self.data
+        self.incident_number = self.data['incident_number']
+        self.pagerduty_created_on = self.data['created_on']
+        if self.data['trigger_summary_data']
+          self.subject = self.data['trigger_summary_data']['subject']
+        end
+        self.service_name = self.data['service']['name']
       end
-      self.service_name = self.data['service']['name']
       super
     end
 

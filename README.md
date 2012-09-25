@@ -1,5 +1,3 @@
-![Pagerage](https://raw.github.com/gorsuch/pagerage/master/pagerage.jpg)
-
 # Pagerage
 
 [![Build Status](https://secure.travis-ci.org/gorsuch/pagerage.png)](http://travis-ci.org/gorsuch/pagerage)

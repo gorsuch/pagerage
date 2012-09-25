@@ -6,10 +6,14 @@
 
 Coming soon!
 
-## Configuration
+## Heroku Setup
 
 ```bash
-export PAGERDUTY_BASE_URL=https://user%40domain.com:password@domain.pagerduty.com/api/v1
+$ heroku create
+$ heroku addons:add heroku-postgress:crane
+$ heroku pg:promote <color>
+$ heroku config:add PAGERDUTY_BASE_URL=https://user%40domain.com:password@domain.pagerduty.com/api/v1
+$ git push heroku master
 ```
 
 ## Fetching Incidents
